@@ -5,17 +5,26 @@ class DB:
     def add_user(self, user):
         self.users.append(user)
 
-
-class User:
-    def __init__(self, name, email, password):
+class Person:
+    def __init__(self, name, emai):
         self.name = name
         self.email = email
+
+    def walk(self):
+        print("running")
+
+class User(Person):
+    def __init__(self, name, email, password):
+        Person.__init__(self, name, emai)
         self.password = password
 
+    def walk(self):
+        Person.walk(self, )
+        print("walking")
 
-class Andelan(User):
 
-    def __init__(self, name, email, password, cohort):
-        User.__init__(self, name, email, password, cohort)
-        
+class Andelan(Person):
+
+    def __init__(self, name, email, cohort, password=None,):
+        Person.__init__(self, name, email, password)
         self.cohort = cohort

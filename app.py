@@ -15,3 +15,5 @@ def add_user(name, email, password, cohort=None, user_type='Normal'):
 add_user('test_user', 'test_user@gmail.com', 'veryhardtogeuss')
 # add_user('test_Andelan', 'test_andelan@gmail.com', 'veryhardtogeuss',
 #          cohort=10, user_type='Andelan')
+
+app = Flask(__name__)
